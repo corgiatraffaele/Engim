@@ -1,0 +1,174 @@
+1. Indicare se i seguenti statement sono corretti oppure errati.
+
+int i='1';			Corretto? N		Perchè? dovrebbe restituire un intero, quindi senza '' 
+int j=1;			Corretto? Y		Perchè?
+string s=1;			Corretto? N		Perchè? string dovrebbe restituire una stringa 
+string a=j+'1';			Corretto? Y		Perchè? è una concatenazione 
+
+function int miafun (int par1){			Corretto? Y		Perchè?
+	return par1;
+}
+
+int b=miafun(1);	Corretto? Y		Perchè?
+string c=miafun(1);	Corretto? N		Perchè? la function miafun restituisce un intero non una stringa
+int d=miafun('1');	Corretto? N		Perchè? viene dichiarato un int ma il risultato è una stringa
+-------------------------------------------------------------------------------------------------------------------------------
+
+2. Dato il seguente codice, cosa restituisce?
+
+function int miafun(ref int par1, int par2){
+	int ret=0;
+	par1 = par1 + par2;
+	ret= par1 + par2;
+	return ret;
+}
+
+int var1 = 1;
+int var2 = miafun(var1, 2);
+console.log('var1', var1);			// => cosa scrive? var11
+console.log('var2', var2);			// => cosa scrive? var25
+---------------------------------------------------------------------------------------------------------------------------------
+
+3. Scrivere una funzione che accetti in input un array di interi e restituisca in output la somma di tutti gli elementi che sono pari
+
+INPUT: arrInput=[1,2,6,3,5]
+
+ var arr arrInput=[1,2,6,3,5];
+
+	function int miaSomma(arrInput){
+	ret=0;
+		for(i=0; i<arrInput.lenght; i++){
+			
+			if(arrInput[i] % 2 == 0){
+			ret+= arrInput[i];
+			}		
+		}
+
+	return int ret;
+	}
+
+
+OUTPUT: ret=8
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+4. Scrivere una funzione che accetti in input un array di json definito in jsonInput, e restituisca in output un json che contenga
+i totali delle size raggruppati per categoria e per tipo extension
+
+INPUT: jsonInput=[
+{id: 1, category: "cat1", name: "file1.pdf", extension: "pdf", size: 100 },
+{id: 2, category: "cat2", extension: "xls", size: 200 },
+{id: 3, category: "cat2", name: "file5.docx", extension: "docx", size: 150 },
+{id: 4, category: "cat1", extension: "pdf", size: 200 },
+{id: 5, category: "cat4", name: "file9.pdf", extension: "pdf", size: 300 }
+]
+OUTPUT: jsonOutput = {cat1: <int>, cat2: <int> ecc, pdf: <int>, xls: <int>, ecc}
+
+
+ var Json jsonInput=[
+{id: 1, category: "cat1", name: "file1.pdf", extension: "pdf", size: 100 },
+{id: 2, category: "cat2", extension: "xls", size: 200 },
+{id: 3, category: "cat2", name: "file5.docx", extension: "docx", size: 150 },
+{id: 4, category: "cat1", extension: "pdf", size: 200 },
+{id: 5, category: "cat4", name: "file9.pdf", extension: "pdf", size: 300 }
+]
+
+function <json> miaFun(jsonInput[]){
+
+	ret= {};
+
+	for( const element of jsonInput){
+
+		if (ret[!element.category]){
+			ret[element.category]= element.size;
+		}else{
+			ret[element.category]+= element.size;
+		} 
+		
+		if (ret[!element.extension]){
+			ret[element.extension]= element.size;
+		}else{
+			ret[element.extension]+= element.size;
+		} 
+	}
+	return <Json> ret;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Esercizio 5.
+dobbiamo gestire un elenco di alberghi che hanno le seguenti caratteristiche
+
+- nome
+- indirizzo
+- tipo di struttura (Bed and breakfast, ostello, albergo)
+- prezzi di camere a notte sulla base del livello ( LIV1 = 150, LIV2 = 200)
+- per ogni livello, potrei avere più camere. gestire l'informazione per ogni giorno dell'anno in corso se sono prenotate oppure libere
+
+scegliere la struttura dati preferita che memorizzi quanto richiesto e indicare qualche esempio.
+
+Albergo CASABELLA, albergo, LIV1 = 100, LIV2 = 200, 5 camere LIV1, 3 camere LIV2, camera1 LIV1 il 3/1/2021, il 10/1/2021 occupata, camera2 LIV1 il 5/1/2021 occupata
+Ostello STUDENTIPLUS, ostello, LIV1 = 50, 10 camere LIV1, camera1 LIV1 il 3/1/2021, il 10/1/2021 occupata, camera2 LIV1 il 5/1/2021 occupata
+
+
+
+let array Hotel= [ {nome:'Albergo Casabella',
+                    type:'Albergo',
+                    price:{ liv1:100, liv2:200},
+                    roomTot:{liv1:{r1:[101,201,301,401,501,601,701,801,901,1001], //un array dove memorizzerò se la stanza è libera o vuota a seconda del giorno es: 101= 01/01
+                                  r2:[101,201,301,401,501,601,701,801,901,1001]   // poi ogni giorno potrà restituire un bool per capire se è libera o occupata
+                                  r3:[101,201,301,401,501,601,701,801,901,1001]
+                                  r4:[101,201,301,401,501,601,701,801,901,1001]
+                                 r5:[101,201,301,401,501,601,701,801,901,1001]}
+                            liv2:{r1:[101,201,301,401,501,601,701,801,901,1001]
+                                 r2:[101,201,301,401,501,601,701,801,901,1001]
+                                  r3:[101,201,301,401,501,601,701,801,901,1001]}
+                    }
+                    {nome:'ostello STUDENTIPLUS',
+                    type:'Ostello',
+                    price:{ liv1:50},
+                    roomTot:{liv1:{r1:[101,201,301,401,501,601,701,801,901,1001], 
+                                  r2:[101,201,301,401,501,601,701,801,901,1001]
+                                  r3:[101,201,301,401,501,601,701,801,901,1001]
+                                  r4:[101,201,301,401,501,601,701,801,901,1001]
+                                 r5:[101,201,301,401,501,601,701,801,901,1001]
+                                r6:[101,201,301,401,501,601,701,801,901,1001]
+                                 r7:[101,201,301,401,501,601,701,801,901,1001]
+                                 r8:[101,201,301,401,501,601,701,801,901,1001]
+                                 r9:[101,201,301,401,501,601,701,801,901,1001]
+                                r10:[101,201,301,401,501,601,701,801,901,1001]
+                                 }
+                    }
+                             
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

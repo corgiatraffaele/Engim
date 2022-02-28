@@ -1,0 +1,194 @@
+
+Assegnamento di variabili: Valore e Referenza (o riferimento)
+
+parlando per referenza parliamo di un puntatore assegnato alla variabili.
+
+es. A(1)
+        A è la referenza e (1)è il valore
+
+    quindi in  "B(A)" 
+            B ha un valore della referenza di A(1) 
+
+es.
+
+prima = __prima__ \è una cella di memoria\
+seconda=__seconda___ \è una cella di memoria\
+
+
+prima =seconda
+
+qundi :
+
+    prima= seconda
+    seconda =seconda
+
+poi se:
+
+prima=ciao
+    prima =ciao
+    seconda=seconda
+
+
+
+
+                                Assegnamento per referenza
+
+var prima [0,1,2,3,4,5]
+
+    prima = [0,1,2,3,4,5] 
+    seconda = prima 
+         visto che prima è un arrey, il contenuto di seconda è un puntatore alla cella " prima"
+
+        quindi se 
+            prima[0]=9
+                prima[9,1,2,3,4,5]
+                seconda[9,1,2,3,4,5] 
+
+            se
+            seconda[0]=8
+                prima[8,1,2,3,4,5]
+                seconda[8,1,2,3,4,5]               
+
+        
+
+                    ESEMPIO DI RICHIAMO DI FUNZIONI
+
+Se lavorano con dati semplici lavorano per valore.
+Se con dati complessi come arrey, lavorano per referenza (ref).
+
+
+Passaggio per Valore
+Scope di a 
+|
+|
+|        int a= 0;
+|
+|        function  miaFun (int par1){          |Scope di par1
+|                    console.log(par1, par1);      |scrivi par1 quindi se a[0] par1[0]
+|                    par1=5;                       |diamo 5 a valore di par1[5]
+|                    console.log('par1',par1);     | quindi par1[5]
+|                    console.log('a',a)            | e è rimasto  a[0]
+|                                                  | 
+|        }
+|
+|        miaFun (a);
+|______  miaFun (0);
+
+
+
+Scope di Assegnamento
+
+Scope di a 
+|
+|
+|        int a= 0;
+|
+|        function  miaFun (ref int par1){         |Scope di par1 (aggiungengio REF fa un'assegnazione per referenza)
+|                    console.log(par1, par1);     |scrivi par1 quindi se a[0] par1[0]
+|                    par1=5;                      |diamo 5 a valore di par1[5]
+|                    console.log('par1',par1);    | quindi par1[5]
+|                    console.log('a',a)           | scrivi a quindi  a[5]
+|                                                 | 
+|        }        
+|
+|       miafun (a);
+|______ miafun (5);
+    
+
+
+
+|I nomi delle variabili devono essere significativi:
+usare dei nomi parlati. esempio abbreviare le parole.
+
+esercizio
+
+Scegliete nomi e tipo di variabili  per memorizzare queste informazioni.
+        nome e cognome di uno studente
+        età
+        sesso
+        indirizzo
+        codice fiscale
+        possessore di green pass
+        presenza in ore
+        assenza in ore
+        giorni frequentati
+
+
+        Nel programma esiste un array con tutti i giorni frequenti a scuola
+        ogni elemento nell'arrey è un arrey fi presenze per lo studente(lo riconosciamo dall'indice)
+
+        scrivere un funzione che dato in input l'arrey con le presenze di tutti gli studenti 
+        restituisca il suo totale presenze.
+-----------------------------------------------------------------------------------
+
+
+
+FUNZIONE:
+ è un blocco di codice a cui passiamo in input dei parametri e restituisce un valore in output
+
+    function type nomefunzione (type parametro1 , type parametro2{
+              
+               return variabile del type dichiarato.
+
+    }
+
+    
+    
+    function int prodotto ( int moltiplicando, int moltiplicatore){
+            int ret = 0;
+
+          regola  5*3 => 5+5+5  sommo il moltiplicando tante volte quante sono indicate dal moltiplicatore
+
+          for (int i = 0; i< moltiplicatore; i++){
+
+                    return += moltiplicando 
+              
+          }
+                return ret;
+
+    }
+            prodotto (5,3) => restituirà 15
+
+   console.log (moltiplicando); // errore, non moltiplicando è OUT OF SCOPE, ossia è definita solo nella funzione
+ 
+
+Altri tipi di dato:
+
+-Object è qualsiasi tipo di dato.
+
+-JSON (annotazione di oggetto javascript) 
+        Sequenza di coppie chiave-valore.
+         differisce da un array prchè per accedervi si utilizza
+         
+          json.chiave = valore
+        
+        e  non nome dell'indice come nell'array
+          
+          myjson.toString()
+
+        Json.stringlfy (myjson) //funzione predefinita che prende un json e lo converte in stringa
+           
+        Json.parse  // prende una struttura e la converte in oggetto JSON
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

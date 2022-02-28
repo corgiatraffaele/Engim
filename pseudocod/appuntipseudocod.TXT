@@ -1,0 +1,164 @@
+            //inizio programma main
+
+N=LEGGIILNUMERO();// LEGGIILNUMERO È FUNZIONE NATIVA PER ACCETTARE UN NUM DIGITATO DA TASTIERA
+
+INT OUT= 0; // SARÀ IL NUMERO DA RESTITUIRE ALLA FUNZIONE
+
+FOR (INT I=1; I<=N; I++)
+
+             //PER OGNI NUMERO ELABORATO VERIFICO SE È PRIMO. IN TAL CASO INCREMENTO OUT, altrimenti NULLA
+    
+
+    IF (ILNUMEROÈPRIMO (I))
+        OUT =OUT+ 1;
+
+scrivi (out);
+
+ILNUMEROÈPRIMO(4)=> restituisce false;
+
+
+bool valore= ILNUMEROÈPRIMO(5);
+int j=9; 
+bool valore2= ILNUMEROÈPRIMO(j)
+if(ILNUMEROÈPRIMO(j))
+    scrivi ('ok');
+
+                //fine programma main
+
+                //STATEMENT DI DICHIARAZIONE DI VARIABILE
+TIPO NOMEVAR = INIZIALIZZAZIONE
+
+FUNCTION TIPO_DI_OUTPUT NOME FUNZIONE (PARAMETRI DI INGRESSO)
+{
+                //BLOCCO DI PROGRAMMA
+    RETURN TIPO_DI_OUTPUT
+}
+
+
+
+FUNCTION BOOL ILNUMEROÈPRIMO (INT N)
+        {
+                        //N LA USO SOLO DENTRO IL BLOCCO DELLA FUNZIONE
+                        //NON C'ENTRA NULLA CON ALTRE VARIABILI ALL'ESTERNO
+                        //SCOPE di N È IL Blocco della funzione
+                        //la funzione restituisce TRUE se il numero è primo, FALSE altrimenti
+                        //il numero è primo solo se è divisibile solo per se stesso e 1.
+                        //il numero non è primo se trovo un divisore tra 2 e n-1 che lo divide
+
+
+                        //inizializzo una variabile di ritorno bool e true 
+                        //NB: n<0 =>errore
+                        //NB: n=0 =>errore
+                        //    n=1 => true
+                        //   ciclo da 2 a n-1
+                        //   se lo divide allora ret= false e forzo l'uscita.NB FORZATURA,ma pratica.
+
+        bool ret= true
+    
+          int var1 = n;
+        int calc;
+        if (n<0)
+            //gestire l'errore
+        else if (n=0)
+            //gestire l'errore        
+
+
+            for (int num =2; n<n; num ++){
+                calc=var1/(num-1);
+                    if (cal* num !=n) //1*3 !=5
+
+                       //non fa nulla 
+    
+
+
+            else [{
+    
+                      //il numero non è primo 
+            ret=false
+                          //esci
+            break;
+            }
+        
+        
+        
+        }   
+        
+
+    n=n+1
+}
+
+if (condizione )
+            // STATEMENT
+            //Blocco è uno STATEMENT
+{
+
+            //insieme di operazioni
+
+}
+
+---------------------------------------------------------------
+tot = (prodotto); //1*2
+
+prodotto (5,3);
+
+function int prodotto (int var1,int var2)
+{       //se abbiamo solo a disposizione + e - come possiamo scrivere la funzione prodotto?
+        //scelta una variabile di return
+    int ret=0;
+      
+    for (int n= ; n< var2; n++) {
+
+        ret=ret+var1;
+        }
+
+    return ret;
+}
+
+prodotto tra due numeri = sommare il primo numero tante volte quante il secondo
+
+prodotto (5,3) =>
+
+ret=0;
+ret=ret+5
+ret=ret+5
+ret=ret+5
+
+restituisce ret;
+------------------------------------------------------------------
+int a=1;
+int b=2
+
+
+    //scrivere una sequenza di istruzioni che alla fine sposti il valore di a e in b e viceversa.
+    //alla fine devo avere a= 2 e b=1;
+
+int c=a;
+     //inizializzo una variabile c
+     int c=b
+     int a=b
+
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
