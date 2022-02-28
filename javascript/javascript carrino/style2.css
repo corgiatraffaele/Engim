@@ -1,0 +1,17 @@
+.container{
+    margin: 50px;
+    text-align: center;
+    }                         
+
+#icon {
+        width: 100px;
+        margin-bottom: 20px;
+}
+
+#joke {
+    font-size: 30px;
+    line-height: 1.5;
+    max-width:80%;
+    border-bottom: 1px solid whitesmoke;
+    margin: 0 auto;
+}

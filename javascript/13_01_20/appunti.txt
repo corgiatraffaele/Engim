@@ -1,0 +1,8 @@
+
+
+
+for of loop
+
+per iterare gli array
+
+let

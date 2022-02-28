@@ -1,0 +1,19 @@
+#btn {
+    margin:20px 0;
+}
+#overme {
+        border: 2px solid black;
+        padding: 20px;
+}
+
+.bg-green{
+        background-color: limegreen;
+}
+
+.color-red{
+        color:red;
+        }
+
+.dashed-blue{
+   border: 2px dashed blue;
+}
