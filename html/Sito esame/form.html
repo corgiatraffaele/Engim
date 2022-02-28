@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+    <div class="topnav"><div>
+        <a class="active" href="index.html">Chi siamo</a>
+        <a href="#news">I nostri lavori</a>
+       <a href="#contact">Contatti</a></div>
+       
+        <div class="navx">
+        <a href="#about" id='login' >Login</a>
+        <a href="form.html" id='login' >Registrati</a>
+    </div>
+    </div>
+
+    <form method='post' action="pagina_destinatario.php" autocomplete="on" id='modulocontatti'>
+        <fieldset>
+
+            <legend>Registrati per rimanere aggiornato sulle nostre offerte</legend>
+
+            <legend><b>Dati Anagrafici</b></legend>
+            <label>
+                <div class="name"><b>Nome</b>
+                <input type="text"    name="nome" value="nome di default" size="12" maxlength="12" >                   
+            </div>
+
+            <div class="cognome">
+                <b>Cognome</b>
+                <input type="text" name="cognome" value="cognome di default" size="20" maxlength="20">
+            </div>
+                <div class="tel">
+                <b>Numero di telefono</b>
+                <input type="text" nome='telefono' value="telefono di default" size="12" maxlength="12">
+            </div>
+          
+            </label>
+
+      
+</form>
+
+<form method='post' action="pagina_destinatario.php" autocomplete="on" id='modulocontatti' >
+
+<div class="via">
+<legend><b>Indirizzo di residenza</b></legend>
+    
+<b>Via</b>
+<input type="radio" name="via/piazza/strada"
+value="via">
+<b>Piazza</b>
+<input type="radio"  name="via/piazza/strada"
+value="piazza">
+<b>Strada</b>
+<input type="radio"  name="via/piazza/strada"
+value="strada"></div>
+
+
+<div class="indirizzo">
+<input type="text" nome='indirizzoesteso' value="" size="25" maxlength="10"></div>
+<div class="civico">
+<b>N°Civico</b>
+<input type="text" nome='n°civico' value="" size="6" maxlength="6"></div>
+<div class="cap"><b>Cap</b>
+<input type="text" nome='cap' value="" size="6" maxlength="6"> </div>
+<div class="citta">    <b>Città</b>
+<input type="text" nome='città' value="" size="12" maxlength="12"></div>
+<div class="regione">
+<b>Regione</b>
+<input type="text" nome='regione' value="" size="12" maxlength="12"></div>
+   
+   
+
+
+</form>
+
+
+
+
+
+
+<label>
+   <div class="email"><b>Email</b>
+    <input type="text"    name="email" value="" size="18" maxlength="18" ></div>         
+
+  <div class="psw"> <b>Password</b>
+    <input type="text" name="password" value="" size="8" maxlength="8"></div> 
+  <div class="rpsw">  <b>Ripeti Password</b>
+    <input type="text" nome='rpassword' value="" size="8" maxlength="8">
+</div> 
+
+</label>
+Acconsenti a ricevere le nostre Newsletters
+<input type="checkbox" name="Newsletter" id="">
+<br>
+Acconsenti a ricevere offerte dai nostri affiliati
+<input type="checkbox" name="NewsletterAff" id="">
+
+</fieldset>
+ 
+
+<div class="footer">
+
+        <h1>Lorem design</h1>
+            Via, <br>
+            10184 Torino<br>
+            email@gmail.com<br>
+            011-9900000/ +39 3927775520 <br>
+            <div class="icone">
+                <a href="https://it-it.facebook.com/" target=”_blank”><i class="fab fa-facebook-square"></i></a>&nbsp&nbsp
+                <a href="https://www.instagram.com/accounts/login/"target=”_blank”><i class="fab fa-instagram" ></i></a>&nbsp&nbsp
+                <a href=""><i class="fab fa-whatsapp"></i></a>&nbsp&nbsp
+            </div>
+ 
+ 
+</div>
+    
+
+
+</body>
+
+</html>

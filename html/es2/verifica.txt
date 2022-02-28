@@ -1,0 +1,47 @@
+1. Indicare se i seguenti statement sono corretti oppure errati.
+
+int i='1';			Corretto? Y/N		Perchè?
+int j=1;			Corretto? Y/N		Perchè?
+string s=1;			Corretto? Y/N		Perchè?
+string a=j+'1';		Corretto? Y/N		Perchè?
+
+function int miafun (int par1){			Corretto? Y/N		Perchè?
+	return par1;
+}
+
+int b=miafun(1);	Corretto? Y/N		Perchè?
+string c=miafun(1);	Corretto? Y/N		Perchè?
+int d=miafun('1');	Corretto? Y/N		Perchè?
+
+2. Dato il seguente codice, cosa restituisce?
+
+function int miafun(ref int par1, int par2){
+	int ret=0;
+	par1 = par1 + par2;
+	ret= par1 + par2;
+	return ret;
+}
+
+int var1 = 1;
+int var2 = miafun(var1, 2);
+console.log('var1', var1);			// => cosa scrive?
+console.log('var2', var2);			// => cosa scrive?
+
+3. Scrivere una funzione che accetti in input un array di interi e restituisca in output la somma di tutti gli elementi che sono pari
+
+INPUT: arrInput=[1,2,6,3,5]
+OUTPUT: ret=8
+
+4. Scrivere una funzione che accetti in input un array di json definito in jsonInput, e restituisca in output un json che contenga
+i totali delle size raggruppati per categoria e per tipo extension
+
+INPUT: jsonInput=[
+{id: 1, category: "cat1", name: "file1.pdf", extension: "pdf", size: 100 },
+{id: 2, category: "cat2", extension: "xls", size: 200 },
+{id: 3, category: "cat2", name: "file5.docx", extension: "docx", size: 150 },
+{id: 4, category: "cat1", extension: "pdf", size: 200 },
+{id: 5, category: "cat4", name: "file9.pdf", extension: "pdf", size: 300 }
+]
+OUTPUT: jsonOutput = {cat1: <int>, cat2: <int> ecc, pdf: <int>, xls: <int>, ecc}
+
+

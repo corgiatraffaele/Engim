@@ -1,0 +1,32 @@
+
+.flexcontainer{
+                display: flex;
+                background-color: brown;
+                flex-direction: column;/*div in verticale*/
+                flex-direction: column-reverse;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-wrap: nowrap;
+                justify-content: center;       /* mantieni elementi al centro */
+                justify-content: space-between;/* mantieni uno spazio tra gli elementi  */
+
+                align-items: center;
+}
+
+
+
+.flexcontainer > div{
+            background-color: rgba(202, 193, 211, 0.26);
+            padding: 10px;
+            margin: 10px;
+            font-size: 15px;
+
+}
+
+@media (max-width: 600px) { 
+            .flexcontainer{
+            flex-direction: column;
+        }
+}/*per far si che riducendo lo schermo si mettano in colonna*/
+
+

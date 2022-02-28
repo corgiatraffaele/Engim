@@ -1,0 +1,21 @@
+
+
+body{ background-color: rgba(74, 115, 131, 0.315);
+        padding: 3%;
+
+}
+
+nav{background-color: rgba(18, 88, 88, 0.15);
+    height: 50px;
+    width: auto;
+
+}
+
+.carousel{ padding-top: 150px;
+    color: blanchedalmond;
+            height: 150px;
+            width: 150px;
+            
+
+
+}

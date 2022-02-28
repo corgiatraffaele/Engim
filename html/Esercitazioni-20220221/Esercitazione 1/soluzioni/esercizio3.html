@@ -1,0 +1,138 @@
+<html>
+<head>
+	<title>Esercizio 3</title>
+</head>
+
+<body>
+	<font face=verdana>
+	<table width="100%">
+		<tr>
+			<td width="80%"><font size=2>ESERCIZI HTML</font></td>
+			<td align=right><font size=2>14/10/14 16:11</font></td>
+		</tr>
+	</table>
+	<hr>
+	<h1><b>RAPPRESENTAZIONE - CONVERSIONE DI BASE</b></h1>
+	<hr size=1>
+	<font color=blue>Rappresentazioni di riferimento</font>
+	<table border=1 style="color:blue">
+		<tr>
+			<td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>decimale</td>
+		</tr>
+		<tr>
+			<td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>10</td><td>esadecimale</td>
+		</tr>
+		<tr>
+			<td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>20</td><td>ottale</td>
+		</tr>
+		<tr>
+			<td>0</td><td>1</td><td>10</td><td>11</td><td>100</td><td>101</td><td>110</td><td>111</td><td>100</td><td>1001</td><td>1010</td><td>1011</td><td>1100</td><td>1101</td><td>1110</td><td>1111</td><td>10000</td><td>binario</td>
+		</tr>
+	</table>
+	<h2 style="background-color:gray">ESERCIZIO 1.1.1 - <small><small>CONVERSIONE DA DECIMALE A BASE N</small></small></h2>
+		<p>Convertire i seguenti numeri decimali nelle basi specificate.</p>
+		<p><i><b>Metodo</b>: si effettuano divisioni successive del numero dato per la base richiesta N; i resti delle
+			singole divisioni, presi alla rovescia, rappresentano le cifre del numero nella base N.</i></p>
+		<p><i>Esempio: convertire 109<sub>10</sub> in base 2, 5 e 16.</i></p>
+		<table border=1 width="100%">
+			<tr align=center>
+				<td width="68">109</td>
+				<td width="68">54</td>
+				<td width="68">27</td>
+				<td width="68">13</td>
+				<td width="68">6</td>
+				<td width="68">3</td>
+				<td width="68">1</td>
+				<td width="68">0</td>
+				<td width="355" align=left><= Quozienti</td>
+			</tr>
+			<tr align=center>
+				<td width="68">1</td>
+				<td width="68">0</td>
+				<td width="68">1</td>
+				<td width="68">1</td>
+				<td width="68">0</td>
+				<td width="68">1</td>
+				<td width="68">1</td>
+				<td width="68"></td>
+				<td width="355" align=left ><=Resti</td>
+			</tr>
+		</table>
+		<p><i>Quindi 109<sub>10</sub>= (1101101)<sub>2</sub></i></p>
+		<table border=1 width="100%">
+			<tr align=center>
+				<td width="68">109</td>
+				<td width="68">21</td>
+				<td width="68">4</td>
+				<td width="68">0</td>
+				<td width="355" align=left><= Quozienti</td>
+			</tr>
+			<tr align=center>
+				<td width="68">4</td>
+				<td width="68">1</td>
+				<td width="68">4</td>
+				<td width="68"></td>
+				<td width="355" align=left><=Resti</td>
+			</tr>
+		</table>
+		<p><i>Quindi 109<sub>10</sub>= (414)<sub>5</sub></i></p>
+		<table border=1 width="100%">
+			<tr align=center>
+				<td width="68">109</td>
+				<td width="68">6</td>
+				<td width="68">0</td>
+				<td width="355" align=left><= Quozienti</td>
+			</tr>
+			<tr align=center>
+				<td width="68">13=D</td>
+				<td width="68">6</td>
+				<td width="68"></td>
+				<td width="355" align=left><=Resti</td>
+			</tr>
+		</table>
+		<p><i>Quindi 109<sub>10</sub>= (6D)<sub>16</sub></i></p>
+		
+		<table>
+			<tr>
+				<td width="82%"><sup>1)</sup><b>345 in base 2</b></td><td align="right" ><font color=gray  size="2">[R. 101011001]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup>2)</sup><b>345 in base 8</b></td><td align=right><font style="color:gray"  size="2"> [R. 531]</font></td>
+			</tr>
+			<tr>
+				<td  width="82%"><sup>3)</sup><b>345 in base 16</b></td><td align=right><font style="color:gray"  size="2">[R. 12424]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup>4)</sup><b>989 in base 5</b></td><td align=right><font style="color:gray"  size="2">[R. 159]</font></td>
+			</tr>
+			<tr>
+				<td  width="82%"><sup>5)</sup><b>417 in base 7</b></td><td align=right><font style="color:gray"  size="2">[R. 1134]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup >6)</sup><b>615 in base 9</b></td><td align=right><font style="color:gray"  size="2">[R. 753]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup >7)</sup><b>426 in base 2</b></td><td align=right><font style="color:gray"  size="2">[R. 110101010]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup >8)</sup><b>1042 in base 11</b></td><td align=right><font style="color:gray"  size="2">[R. 868]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup>9)</sup><b>6666 in base 16</b></td><td align=right><font style="color:gray"  size="2">[R. 1ADA]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup >10)</sup><b>4596 in base 4</b></td><td align=right><font style="color:gray"  size="2">[R. 1013310]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup >11)</sup><b>687 in base 16</b></td><td align=right><font style="color:gray"  size="2">[R. 2AF]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup >12)</sup><b>595 in base 5</b></td><td align=right><font style="color:gray"  size="2">[R. 4340]</font></td>
+			</tr>
+			<tr>
+				<td width="82%"><sup >13)</sup><b>111 in base 2</b></td><td align=right><font style="color:gray"  size="2">[R. 1101111]</font></td>
+			</tr>
+		</table>
+	</font>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body bgcolor="yellow">
+<h1>Scheda partecipazione</h1>
+<form method="post" action="pagina.php" autocomplete="on" id="modulocontatti">
+<!--action="mailto:carmagnola@engimtorino.net"-->
+
+
+<fieldset>
+<legend><b>Dati personali</b> </legend>
+<details>
+<summary><i>Perchè ti chiediamo questi dati?</i>
+</summary>
+<p>Questi dati sono necessari per registrare ogni partecipante</p>
+</details> <br />
+<label><b>Nome*</b> <input type="text" name="nome" value="nome" size="25" maxlength="5" required="required" autofocus="autofocus" /><br /><br />
+</label>
+<label><b>Cognome* </b> <input type="text" name="nome" value="cognome" size="25" /><br /><br />
+</label>
+<label><b>Email</b> <input type="email" size="25" name="email" /><br /><br />
+</label>
+<label><b>Numero di telefono </b> <input type="text" name="cell" size="25" /><br /><br />
+</label>
+
+<label><b>Numero componenti della famiglia</b>
+<input type="number" name="nfamiglia" size="25" min="0" 
+max="7" value="1" />
+</label>
+</fieldset>
+<br />
+<br />
+<fieldset>
+<legend><b>I tuoi interessi</b> </legend>
+<details>
+<summary><i>Perchè ti chiediamo questi dati?</i>
+</summary>
+<p>Questi dati ci servono per conoscerti meglio</p>
+</details> <br />
+
+<h4>Indica il tuo livello di gradimento per i seguenti argomenti: </h4>
+<label>Natura </label><br />
+0 <input type="range" name="nature" min="0" max="10" step="1" /> 10
+<br />
+<br />
+<label>Architettura </label><br />
+0 <input type="range" name="architettura" min="0" max="10" step="1" /> 10
+<br />
+<br />
+<label>Storia </label><br />
+0 <input type="range" name="storia" min="0" max="10" step="1" /> 10
+<br />
+<br />
+
+
+
+</fieldset>
+<br /><br />
+<fieldset>
+<legend>Il tuo tour</legend>
+<label><b>In quale mese ti piacerebbe fare il tour?</b>
+</label>
+<input type="month" name="mese" />
+<br />
+
+
+<br />
+
+
+<br />
+
+
+<label><b>Numero partecipanti al tour</b>
+<input type="number" name="npartecupanti" size="25" min="0" 
+max="10" value="1" />
+</label>
+<br/>
+<br/>
+
+<label><b>Indica a quali tour sei interessato</b></label><br />
+Dalla Gran Madre a Piazza Carlo Felice<input type="checkbox" name="1" value="1" />  <br />
+La collina torinese<input type="checkbox" name="2" value="2" />  <br />
+Torino Magica<input type="checkbox" name="3" value="3"> <br />
+
+
+
+<br/><br />
+<label><b>Con quale mezzo di trasporto arriverai?</b></label>
+<select name="mezzo">
+<option value=" ">Seleziona il tuo mezzo di trasporto</option>
+<option value="occupato">Auto</option>
+<option value="disoccupato">Mezzo Pubblico</option>
+<option value="studente">Piedi</option>
+<option value="studente">Taxi</option>
+</select><br //><br />
+<label><b>Come pagherai?</b></label><br />
+<input type="radio" name="pagamento" value="CC" checked="checked" /><label>Carta di credito</label>
+ <br />
+ <input type="radio" name="pagamento" value="BB" /> <label>Bonifico bancario</label><br />
+<input type="radio" name="pagamento" value="PP"  disabled="disabled" />  <label>Paypal<sup>*</sup></label> <br />
+<br />
+(<sup>*</sup>) Ci scusiamo ma il Paypal non è al momento disponibileù<br /><br />
+<textarea rows="15" cols="40" name="commenti"> Hai altre richieste? Scrivile qui
+</textarea>
+</fieldset>
+
+
+<br />
+
+
+<br />
+<br />
+<button type="submit" form="modulocontatti" value="Invia il modulo">Invia la tua registrazione</button> 
+<button type="reset" form="modulocontatti" value="Invia il modulo">Cancella  la registrazione</button><br />
+<br /><br />
+<a href="index.html"> <b>Torna in Home page</b></a>
+
+</body>
+</html>
+

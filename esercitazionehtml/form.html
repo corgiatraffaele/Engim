@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="primo.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="page.php" method="post"> <!--action è la pagina su cui stiamo mandando i dati
+                                   method invece può essere GET or POST (Get fa passare i dati nel form nell'url, invece  POST li passa nell'header, quindi se ci sono delle password si utilizza POST  GET per richiedere delle pagine e Post per inviare i dati )
+                                 -->
+<div>
+        <h1>FORM DI REGISTRAZIONE</h1> 
+
+        Titolo: 
+        <select name="title">
+                <option value="" selected="selected"Titolo>
+                        <option value="1">Mr</option>
+                        <option value="2">Mrs</option>
+                        <option value="3">Ms</option>
+                </option>
+            
+
+        </select>
+<table margin-left:2px>
+        <td>Name: <input type="text" name="name"></td><br>
+        <td>Subname: <input type="text" subname="name"></td><br>
+       <tr> <td>E-mail: <input type="text" name="email"></td></tr>
+        <br>
+    </table>
+        <br>
+
+       Tipo di impiego: <table><br>
+     <td>  <input type="radio" id="dipendente" name="impiego" value="dipendente">
+          <label for="html">Dipendente</label></td>
+
+        <td>
+        <input type="radio" id="liberoprofessionista" name="impiego" value="liberoprofessionista">
+          <label for="html">Libero professionista</label></td>
+
+
+        <td> <input type="radio" id="studente" name="impiego" value="studente">
+          <label for="html">Studente</label></td>
+
+
+
+        <td><input type="radio" id="disoccupato" name="impiego" value="disoccupato">
+          <label for="html">Disoccupato</label></td>
+       
+    </table>
+
+    <table>
+       Interessi: <br>
+       <td> 
+       <input type="radio" id="musica" name="interessi" value="MUSICA">
+          <label for="html">Musica</label></td>
+
+        <td><input type="radio" id="sport" name="interessi" value="SPORT">
+          <label for="html">Sport</label></td>
+
+           <td> <input type="radio" id="Computer" name="interessi"  value="COMPUTER">
+          <label for="html">Computer</label></td>
+
+        <td> <input type="radio" id="altro" name="interessi"  value="ALTRO">
+          <label for="html">Altro</label></td>
+       
+    </table>
+
+    <br>
+    <br>
+        
+
+<br>
+<br>
+<table >
+    <tr>
+    <td>Breve descrizione:</td>
+        <td><input type="text" name="descrizione"></td></tr>
+        <br>
+    
+        <tr><td>Password:</td> <td>
+            <input type=password name=password></td></tr>
+                <br>
+       <tr><td>Conferma Password:</td>
+        <td><input type=password name=confpassword></td>
+    </tr>
+</table> 
+ <br><br>
+        <input type="submit">
+    </div>
+    </body>
+</html></td>

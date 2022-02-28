@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <div class="topnav">
+        <div>
+            <a class="active" href="home.html">Home</a>
+            <a href="lavori.html">I nostri lavori</a>
+            <a href="contatti.html">Contatti</a>
+        </div>
+
+        <div class="navx">
+            <a href="index.html">Login</a>
+            <a class="active" href="form.html" id='login'>Registrati</a>
+        </div>
+    </div>
+
+    <form method='post' action="pagina_destinatario.php" autocomplete="on" id='modulocontatti'>
+        <fieldset>
+
+            <legend>Registrati per rimanere aggiornato sulle nostre offerte</legend>
+            <b>Dati Anagrafici</b>
+
+
+            
+                <div class="name">
+                    <b>Nome</b>
+                    <input type="text" name="nome" size="12" maxlength="12">
+                </div>
+
+                <div class="cognome">
+                    <b>Cognome</b>
+                    <input type="text" name="cognome" size="20" maxlength="20">
+                </div>
+                <div class="tel">
+                    <b>Numero di telefono</b>
+                    <input type="text" name="telefono" size="12" maxlength="12">
+                </div>
+
+          
+
+    
+
+   
+
+        <div class="via">
+            <b>Indirizzo di residenza</b>
+            <br>
+            <b>Via</b>
+            <input type="radio" name="via/piazza/strada" value="via">
+            <b>Piazza</b>
+            <input type="radio" name="via/piazza/strada" value="piazza">
+            <b>Strada</b>
+            <input type="radio" name="via/piazza/strada" value="strada">
+        </div>
+
+
+        <div class="indirizzo">
+            <input type="text" name='indirizzoesteso' value="" size="25" maxlength="10">
+        </div>
+        <div class="civico">
+            <b>N°Civico</b>
+            <input type="text" name='n°civico' value="" size="6" maxlength="6">
+        </div>
+        <div class="cap"><b>Cap</b>
+            <input type="text" name='cap' value="" size="6" maxlength="6">
+        </div>
+        <div class="citta"> <b>Città</b>
+            <input type="text" name='città' value="" size="12" maxlength="12">
+        </div>
+        <div class="regione">
+            <b>Regione</b>
+            <input type="text" name='regione' value="" size="12" maxlength="12">
+        </div>
+
+     <div class="email"><b>Email</b>
+          <input type="text" name="email" value="" size="18" maxlength="18">
+        </div>
+
+        <div class="psw"> <b>Password</b>
+            <input type="text" name="password" value="" size="8" maxlength="8">
+        </div>
+        <div class="rpsw"> <b>Ripeti Password</b>
+            <input type="text" name='rpassword' value="" size="8" maxlength="8">
+        </div>
+
+    
+        Acconsenti a ricevere le nostre Newsletters
+        <input type="checkbox" name="Newsletter" id="NewsON">
+        <br>
+         Acconsenti a ricevere offerte dai nostri affiliati
+        <input type="checkbox" name="NewsletterAff" id="NewsAffON">
+         <br>
+            <button class="favorite styled" type="button">
+        Submit
+        </button>
+
+    </fieldset>
+</form>
+
+    <div class="footer">
+
+        <h4>Lorem design</h4>
+        Via, <br>
+        10184 Torino<br>
+        email@gmail.com<br>
+        011-9900000/ +39 3927775520
+
+        <p>Sito creato da Raffaele corgiat form.html</p>
+        <div class="icone">
+            <a href="https://it-it.facebook.com/" target=”_blank”><i class="fab fa-facebook-square"></i></a>&nbsp&nbsp
+            <a href="https://www.instagram.com/accounts/login/" target=”_blank”><i
+                    class="fab fa-instagram"></i></a>&nbsp&nbsp
+            <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>&nbsp&nbsp
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

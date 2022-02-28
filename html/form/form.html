@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>
+        Scheda di partecipazione
+    </h1>
+
+    <form method='post' action="pagina_destinatario.php" autocomplete="on" id='modulocontatti'>
+            <fieldset>
+
+                <legend>Dati personali</legend>
+
+                    <details>
+                        <summary>
+                                perchè richiediamo questi dati?
+                        </summary>
+                        <i>Questi dati sono necessari per l'iscrizione dei partecipanti</i>
+                    </details>
+
+
+
+                <label>
+                    <b>Nome</b>
+                    <input type="text"    name="nome" value="nome di default" size="25" maxlength="5" >                   
+                <br>
+                    <b>Cognome</b>
+                    <input type="text" name="cognome" value="cognome di default">
+                <br>
+                    <b>Numero di telefono</b>
+                    <input type="text" nome='telefono' value="telefono di default" size="25" maxlength="10">
+
+                <br>
+                    <b>Numero di componenti in famiglia</b>
+                    <input type="number" name="nFamiglia" size="25" min="0" value="1">
+                 <br>
+
+
+
+
+                </label>
+
+            </fieldset>
+
+    </form>
+
+    <form method='post' action="pagina_destinatario.php" autocomplete="on" id='modulocontatti' >
+
+    <fieldset>
+    <legend>I tuoi interessi</legend>
+
+        <details>
+            <summary>
+                perchè richiediamo questi dati?
+            </summary>
+            <i>Questi dati sono necessari per l'iscrizione dei partecipanti</i>
+        </details>
+    
+        <p>Indica il tuo livello di interesse</p>
+
+        <label>
+            <b>HTML</b>
+
+             <input name="html" type="range" min="0" max="50" step="10">
+        </label>
+
+        <br>
+
+        <label>
+            <b>PHP</b>
+
+          <input  name="php" type="range" min="0" max="50" step="10">
+        </label>
+
+        <br>
+        
+        <label>
+            <b>JAVA</b>
+
+            <input name="java" type="range" min="0" max="50" step="10">
+        </label>
+
+        <br>
+
+
+    </form>
+</fieldset>
+
+
+        <fieldset>
+            <legend> Il tuo tuor</legend>
+                    
+            <label>
+                <b>In quale giorno vuoi eseguire il tour?</b>
+
+                <input type="date"
+                        name="datatour"
+                        size="25"
+                        min="0"
+                        value="1">
+        <br>
+            </label>
+
+
+            <label>
+
+                <b>Numero partecipanti</b>
+
+                <input type="number" name="npartecipanti"
+                        size="25" min="0" value="1">
+                    </label>
+            <br>
+
+            <b>A quali tour sei interessato?</b>
+
+                <label> 
+
+                     <br>
+                    <b>Genova</b>
+                    <input type="checkbox" name="genova" >
+
+                    <br>
+
+                    <b>Torino</b>
+                    <input type="checkbox" name="torino" >
+
+                    <br>
+
+                    <b>Milano</b>
+                    <input type="checkbox" name="milano" >
+
+
+                </label>
+                <br>
+
+                <label>
+                    <b>Con quale mezzo arrivarai?</b>
+                    <select name="mezzo" >
+                            <option value="">Seleziona il tuo mezzo</option>
+                            <option value="Auto">Auto</option>
+                            <option value="Bus">Bus</option>
+                            <option value="Bici">Bici</option>
+
+                    </select>
+                </label>
+
+<br>
+                <b>Metodo di pagamento</b>
+<br>
+            
+
+                <label>
+                    <b>CC</b>
+                    <input type="radio" name="pagamento"
+                    value="cc">
+                    <b>CARTA</b>
+                    <input type="radio"  name="pagamento"
+                    value="carta">
+                    <b>PayPal</b>
+                    <input type="radio" name="pagamento"
+                    value="paypal">
+
+
+                </label>
+
+
+                
+
+            </label>
+
+
+
+        </fieldset>
+
+    
+        
+    <button type="submit" form="modulocontatti" value="invia il modulo" > Invia la candidatura</button>
+
+    <button type="reset" form="modulocontatti"> Cancella tutti i dati</button>
+
+</body>
+</html>
