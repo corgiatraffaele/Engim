@@ -1,0 +1,56 @@
+CREATE TABLE Paesi(
+  IdPaese INT AUTO_INCREMENT PRIMARY KEY,
+  Nome VARCHAR(20) NOT NULL
+  );
+INSERT INTO Paesi(Nome) VALUES
+ ('Torino'),
+ ('Roma'),
+ ('Napoli'),
+ ('Lecce'),
+ ('Venezia');
+  
+CREATE TABLE Dipendenti (
+  Nome VARCHAR(20) NOT NULL,
+  Cognome VARCHAR(20) DEFAULT 'Bianchi',
+  DipId INT ,
+  PRIMARY KEY (DipId)
+  ); 
+
+INSERT INTO Dipendenti(Nome, Cognome,DipId) VALUES
+('Mario', 'Rossi',1),
+('Sara',default,5),
+('Mara', 'Bianchi',7),
+('Simone', 'Rossi',9),
+('Mario', 'Rossi',22);
+
+DELETE FROM Dipendenti 
+WHERE DipId = 5;
+
+INSERT INTO Dipendenti(Nome, Cognome, DipId) VALUES
+('Blaise', 'Kenmoe', 4);
+
+ALTER TABLE Dipendenti 
+ADD PaeseID INT; 
+
+UPDATE Dipendenti
+SET PaeseID = 1
+WHERE DipID = 1;
+
+UPDATE Dipendenti
+SET PaeseID = 2
+WHERE DipID = 4;
+
+UPDATE Dipendenti
+SET PaeseID = 3
+WHERE DipID = 7;
+
+UPDATE Dipendenti
+SET PaeseID = 4
+WHERE DipID = 9;
+
+ALTER TABLE Dipendenti
+ADD FOREIGN KEY(PaeseID) REFERENCES Paesi(IdPaese); 
+
+INSERT INTO Dipendenti(Nome, Cognome,PaeseID, DipId) VALUES
+('Giorgia', 'Chieca', 1, 15);
+ 

@@ -1,0 +1,31 @@
+SELECT COUNT(*), Dipendenti.Cognome, Dipendenti.Nome
+FROM Dipendenti
+GROUP BY Dipendenti.Cognome, Dipendenti.Nome
+HAVING COUNT(*)>0;
+
+SELECT COUNT(*) as tot_righe, SUM(DipId) as somma_id,
+  MAX(DipId),MIN(DipId),AVG(PaeseID) 
+FROM Dipendenti;
+
+SELECT *
+FROM Dipendenti;
+
+SELECT *
+FROM Dipendenti
+RIGHT JOIN Paesi ON (Dipendenti.PaeseID = Paesi.IdPaese)
+ORDER BY Dipendenti.Nome ASC;
+
+SELECT Dipendenti.Nome, Paesi.Nome
+FROM Dipendenti
+INNER JOIN Paesi ON (Dipendenti.PaeseID = Paesi.IdPaese)
+ORDER BY Dipendenti.Nome ASC;
+
+SELECT *
+FROM Paesi
+INNER JOIN Dipendenti ON (Dipendenti.PaeseID = Paesi.IdPaese);
+
+SELECT *
+FROM Paesi;
+
+SELECT *
+FROM Dipendenti;
