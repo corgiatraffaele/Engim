@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+<!--  <link rel="stylesheet" href="style.css">-->
+
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+      body{
+          font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          margin:0;
+          padding:0;
+          letter-spacing: 0.3px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          letter-spacing: 0.5px;
+          color: #4e4e4e;
+          line-height: 1.8rem;
+
+      }
+      body, body * {
+          box-sizing: border-box;
+      }
+
+      .menu{
+          text-align: center;
+          background: #474747;
+          padding:2rem 0;
+          margin:0;
+          color: white;
+      }
+      .menu h1{
+          margin:0;
+      }
+
+      a{
+          color:#6e6e6e;
+          font-style: italic;
+      }
+      a:hover{
+          opacity:0.9;
+      }
+
+      .tracks-tablist{
+          width: 100%;
+          display: flex;
+          flex-display: row;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom: solid 1px  #838383;;
+          padding:0 1rem;
+
+          font-family: 'Nova Round', cursive;
+          font-weight: bold;
+          letter-spacing: 2px;
+      }
+      .track-slector{
+          padding:0.5rem 1rem;
+          margin:0 0.3rem;
+          border-bottom: solid 3px rgba(0,0,0,0);
+          margin-bottom: -2.5px;
+          color: #838383;
+          font-weight: bold;
+      }
+      .track-slector:hover{
+          cursor: pointer;
+      }
+      .track-slector[data-id=track-1].selected{
+          border-bottom: solid 3px #f90064;
+          color: #f90064;
+      }
+      .track-slector[data-id=track-2].selected{
+          border-bottom:solid 3px #32d68d;
+          color: #32d68d;
+      }
+      .track-slector[data-id=track-3].selected{
+          border-bottom:solid 3px #ff9657;
+          color: #ff9657;
+      }
+      .track-slector[data-id=track-bonus].selected{
+          border-bottom:solid 3px #2dd7c7;
+          color: #2dd7c7;
+      }
+      .track-tab{
+          padding:2rem;
+          display: flex;
+          flex-direction: column;
+      }
+      .track-tab:not(:first-child){
+          display:none;
+      }
+      #track-required{
+          border-radius: 3px;
+          padding:1rem 3rem 2rem 3rem;
+          margin:4rem 2rem;
+          border: dashed 1px #4e4e4e;
+          background: #ebebeb;
+      }
+      #track-required h2{
+          text-align: center;
+      }
+      #track-required li{
+          margin: 1rem 0;
+      }
+      ::-webkit-scrollbar {
+          width: 0 !important
+      }
+  </style>
+
+</head>
+<body>
+
+
+<div class="menu">
+  <h1>Verifica di fine corso</h1>
+  <p>ENGIM Torino, Tecnico sviluppo software 2021/2022</p>
+</div>
+
+<!--<p>Eseguire la parte Obbligatoria, dopodichè scegliere una delle 3 track ed eseguirla. Non è possibile eseguire più di 1 track ad eccezione della track bonus.</p>-->
+
+<div class="heading">
+
+  <div id="track-required">
+    <h2>PARTE obbligatoria (60 punti)</h2>
+    <br>
+    <ol>
+      <li>Eseguire una request in GET all indirizzo : <a href="https://reqres.in/api/users" target="_blank">https://reqres.in/api/users</a></li>
+      <li>Con la lista di user ottenuti dalla request creare una tabella e inserirla nella pagina</li>
+      <li>Le intestazioni della tablla sono <strong>Nome</strong>, <strong>Cognome</strong>, ed <strong>Email</strong> </li>
+      <li>Decidere quali proprietà negli oggetti ottenuti dalla request corrispondono a <strong>Nome</strong>, <strong>Cognome</strong>, ed <strong>Email</strong>
+        ed usarli per creare le righe della tabella.</li>
+    </ol>
+
+  </div>
+</div>
+
+<div class="tracks">
+
+  <div class="tracks-tablist">
+    <div data-id="track-1" class="track-slector selected">TRACK 1</div>
+    <div data-id="track-2" class="track-slector">TRACK 2</div>
+    <div data-id="track-3" class="track-slector">TRACK 3</div>
+    <div data-id="track-bonus" class="track-slector">BONUS TRACK</div>
+
+  </div>
+
+  <div>
+    <div id="tracks">
+    <div id="track-1" class="track-tab selected">
+      <h3>ELIMINAZIONE RIGHE</h3>
+
+      <p>FASE 1 (20 punti) <br>
+        Modificare il codice della parte obbigatoria per aggiungere una colonna alla tabella. <br>
+        La colonna aggiuntiva conterra un bottone con un bottone <strong>Elimina</strong> per ogni riga.
+        Al click sul bottone <strong>Elimina</strong> la riga viene rimossa dalla tabella.
+      </p>
+      <p>FASE 2 (20 punti) <br>
+        Il click sul bottone <strong>Elimina</strong> diventa permanente: <br>
+        utilizzando il <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localstorage</a> tenere traccia degli elementi eliminati,
+        non creare gli elementi eliminati durante la creazione della tabella.
+        ES: Se ricarico la pagina gli elementi eliminati non compaiono.
+      </p>
+      <p>
+        FASE 3 (20 punti) <br>
+        Creare un bottone <strong>Reset</strong> che annulla tutte le operazioni di eliminazione effettutate.
+        Ripristinare gli elemnti cancellati nella tabella. Cancellare anche i dati degli elementi eliminati dal <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localstorage</a>.
+        ES: Se ricarico la pagina dopo aver cliccato sul bottone <strong>Reset</strong> dovrei vedere nuovamente tutti gli user.
+      </p>
+      <br>
+
+
+      <span>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">#localstorage</a>,&nbsp;
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">#addEventListener</a>,&nbsp;
+        <a href="https://www.w3schools.com/jsref/prop_node_parentelement.asp" target="_blank">#parentElement</a>,
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">#createElement</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_blank">#append</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove" target="_blank">#remove</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">#json</a>
+      </span>
+    </div>
+
+
+      <div id="track-2" class="track-tab">
+        <h3>CREAZIONE RIGHE</h3>
+        <p>FASE 1 (20 punti) <br>
+          Creare un form con 3 input di testo: <strong>Nome</strong>, <strong>Cognome</strong>, <strong>Email</strong> ed un tasto <strong>Aggiungi</strong>.
+          al click sul tasto <strong>Aggiungi</strong> controllare che gli input non siano vuoti.
+          Se gli input non sono vuoti aggiungere una nuova riga alla tabella con i dati del form. In questo caso resettare il form.
+        </p>
+        <p>
+          FASE 2 (20 punti) <br>
+          Usando il <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localstorage</a> rendere permanenti le righe aggiunte tramite il form
+          alla creazione della tabella aggiungere anche le righe aggiunte col form.
+          ES: se ricarico la pagina le righe aggiunte non scompaiono.
+        </p>
+        <p>
+          FASE 3 (20 punti) <br>
+          Creare un bottone reset che elimina tutti i dati creati col form e aggiorna la tabella
+          Eliminare i dati sulle righe create dal <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localstorage</a>.
+        </p>
+        <br>
+        <span>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">#localstorage</a>,&nbsp;
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">#addEventListener</a>,&nbsp;
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">#createElement</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_blank">#append</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove" target="_blank">#remove</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset" target="_blank">#reset</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">#json</a>
+      </span>
+      </div>
+      <div id="track-3" class="track-tab">
+        <h3>COLORI</h3>
+        <p>FASE 1 (20 punti)<br>
+          Fare una request all'indirizzo <a href="https://reqres.in/api/colors" target="_blank">https://reqres.in/api/colors</a> per ogni colore restituito creare una checkbox,
+          <br>
+          al click sula checkbox le righe della tabella cambiano colore in base al colore selezionato
+          E permesso selezionare una sola checkbox per volta.
+        </p>
+        <p>
+          FASE 2 (20 punti) <br>
+          mantenere l'informazione del colore selezionato nel <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localstorage</a> ed applicare il colore al caricamento della pagina
+        </p>
+        <p>
+          FASE 3 (20 punti) <br>
+          Creare un bottone <strong>Reset colori</strong>.
+          Il bottone riporta la tabella ai colori originali dati dal css (Qualsiasi essi siano). E cancella tutte le informazioni sui colori salvate nel <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localstorage</a>.
+        </p>
+
+        <span>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">#fetch</a>,&nbsp;
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">#localstorage</a>,&nbsp;
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">#addEventListener</a>,&nbsp;
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove" target="_blank">#remove</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox" target="_blank">#checkBox</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">#json</a>
+        </span>
+
+      </div>
+
+      <div id="track-bonus" class="track-tab">
+        <h3>LOADING & RELOADING</h3>
+        <p>
+          FASE 1 (20 punti)<br>
+          Creare un messaggio di caricamento presente all'inizio al posto della tabella
+          il messaggio viene nascosto quando arriva la risposta. <br>
+          Aggiungere un tasto in cima alla pagina che aggiorna i dati della tabella facendo una nuova request
+          mostrare il messaggio di caricamento durante la request
+        </p>
+        <span>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">#fetch</a>,&nbsp;
+           <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">#createElement</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="_blank">#addEventListener</a>,&nbsp;
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove" target="_blank">#remove</a>
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+    let tabs = document.querySelectorAll('.track-tab')
+
+    let trackSelectors = document.querySelectorAll('.track-slector')
+
+    for(let selector of trackSelectors){
+        selector.addEventListener('click', (e)=>{
+
+            for(let tab of tabs){
+                tab.style.display = 'none'
+            }
+            for(let s of trackSelectors){
+                s.classList.remove('selected')
+            }
+            selector.classList.add('selected')
+
+            let tabToShow = document.getElementById(e.target.dataset.id)
+            if(tabToShow) tabToShow.style.display = 'flex'
+
+        })
+    }
+
+
+</script>
+
+
+
+
+</body>
+</html>
